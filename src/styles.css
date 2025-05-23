@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+
+@theme {
+  --primary-50: oklch(98.15% 0.0163 79.35);
+  --primary-100: oklch(96% 0.0389 82.35);
+  --primary-200: oklch(91.3% 0.0752 78.4);
+  --primary-300: oklch(85.52% 0.1174 74.48);
+  --primary-400: oklch(78.14% 0.1538 63.97);
+  --primary-500: oklch(73.03% 0.1757 54.9);
+  --primary-600: oklch(66.85% 0.1811 47.18);
+  --primary-700: oklch(57.13% 0.1622 43.71);
+  --primary-800: oklch(48.33% 0.1341 42.21);
+  --primary-900: oklch(42.05% 0.109 43.64);
+  --primary-950: oklch(27.25% 0.0719 40.73);}
+@layer base {
+  html {
+    font-family: var(--font-poppins);
+  }
+  body {
+    background-color: var(--color-mint-500);
+  }
+}
