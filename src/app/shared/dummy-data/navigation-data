@@ -1,0 +1,23 @@
+import { Navs } from './../interface/navigation.interface';
+export const navigationData = [
+  {
+    label: "Home",
+    path: "/home",
+  },
+  {
+    label: "Home",
+    path: "/home",
+  },
+  {
+    label: "Home",
+    path: "/home",
+  },
+  {
+    label: "Home",
+    path: "/home",
+  },
+  {
+    label: "Home",
+    path: "/home",
+  },
+];

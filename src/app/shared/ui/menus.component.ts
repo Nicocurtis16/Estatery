@@ -9,4 +9,9 @@ import { CommonModule } from "@angular/common";
 export class MenusComponent {
   @Input() menuType: Menus = "navbar";
   @Input() menuData: string[] = [];
+
+  getImagePath(item: string): string{
+    const imgPath = this.menuType === 'subcategories' ? 'subcategories' : 'products';
+    return `assets/images/${imgPath}/${item}.svg`;
+  }
 }
