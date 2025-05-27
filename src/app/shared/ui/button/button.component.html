@@ -1,0 +1,53 @@
+
+<button
+  class="flex items-center justify-center gap-2 rounded transition-all font-medium focus:outline-none"
+  [class.cursor-pointer]="state === 'active' || state === 'hover'"
+  [class.cursor-not-allowed]="state === 'disable'"
+  [class.opacity-50]="state === 'disable'"
+  [class.hover:opacity-90]="state === 'hover'"
+
+  [class.px-4]="style === 'fill' || style === 'outlined' || style === 'text'"
+  [class.py-2]="style === 'fill' || style === 'outlined' || style === 'text'"
+  [class.bg-blue-600]="style === 'fill' && color === 'primary'"
+  [class.bg-gray-600]="style === 'fill' && color === 'secondary'"
+  [class.bg-green-600]="style === 'fill' && color === 'tertiary'"
+  [class.text-white]="style === 'fill'"
+
+  [class.border]="style === 'outlined'"
+  [class.border-blue-600]="style === 'outlined' && color === 'primary'"
+  [class.border-gray-600]="style === 'outlined' && color === 'secondary'"
+  [class.border-green-600]="style === 'outlined' && color === 'tertiary'"
+  [class.text-blue-600]="style === 'outlined' && color === 'primary'"
+  [class.text-gray-600]="style === 'outlined' && color === 'secondary'"
+  [class.text-green-600]="style === 'outlined' && color === 'tertiary'"
+  [class.hover:bg-blue-50]="style === 'outlined' && color === 'primary' && state !== 'disable'"
+  [class.hover:bg-gray-50]="style === 'outlined' && color === 'secondary' && state !== 'disable'"
+  [class.hover:bg-green-50]="style === 'outlined' && color === 'tertiary' && state !== 'disable'"
+
+  [class.text-blue-600]="(style === 'text' || style === 'small-text') && color === 'primary'"
+  [class.text-gray-600]="(style === 'text' || style === 'small-text') && color === 'secondary'"
+  [class.text-green-600]="(style === 'text' || style === 'small-text') && color === 'tertiary'"
+  [class.hover:bg-blue-50]="style === 'text' && color === 'primary' && state !== 'disable'"
+  [class.hover:bg-gray-50]="style === 'text' && color === 'secondary' && state !== 'disable'"
+  [class.hover:bg-green-50]="style === 'text' && color === 'tertiary' && state !== 'disable'"
+
+  [class.px-3]="style === 'small-text'"
+  [class.py-1]="style === 'small-text'"
+  [class.text-sm]="style === 'small-text'"
+  [class.hover:bg-blue-50]="style === 'small-text' && color === 'primary' && state !== 'disable'"
+  [class.hover:bg-gray-50]="style === 'small-text' && color === 'secondary' && state !== 'disable'"
+  [class.hover:bg-green-50]="style === 'small-text' && color === 'tertiary' && state !== 'disable'"
+
+  (click)="onClick.emit($event)"
+  [disabled]="state === 'disable'"
+>
+  @if (prefixIcon) {
+    <span class="w-5 h-5" [innerHTML]="prefixIcon"></span>
+  }
+  @if (text) {
+    <span>{{ text }}</span>
+  }
+  @if (suffixIcon) {
+    <span class="w-5 h-5" [innerHTML]="suffixIcon"></span>
+  }
+</button>
