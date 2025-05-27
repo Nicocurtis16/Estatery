@@ -1,4 +1,5 @@
-import { Component, EventEmitter, Input, Output } from "@angular/core";
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+
 @Component({
   selector: 'app-button',
   templateUrl: './button.component.html',
@@ -9,6 +10,6 @@ export class ButtonComponent {
   @Input() color: 'primary' | 'secondary' | 'tertiary' = 'primary';
   @Input() prefixIcon?: string;
   @Input() suffixIcon?: string;
-  @Input() text: boolean = true;
+  @Input() text: string = 'Button';
   @Output() onClick = new EventEmitter<Event>();
 }
