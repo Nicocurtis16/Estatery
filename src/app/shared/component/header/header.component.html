@@ -1,7 +1,15 @@
-<div class="w-full ">
-  <div class="cap-width px-[108px] py-[23px] bg-white border-b-2 border-blue-200 flex justify-between">
-    <div><img src="images/logo.svg" alt="Estatery logo"></div>
-    <div></div>
+<div class="w-full">
+  <div
+    class="cap-width px-[108px] py-[23px] bg-white border-b-2 border-blue-200 flex justify-between"
+  >
+    <div><img src="images/logo.svg" alt="Estatery logo" /></div>
+    <div>
+      <app-menus
+        menuType="navbar"
+        [menuData]="['Home', 'Products', 'Categories', 'About']"
+      >
+      </app-menus>
+    </div>
     <div></div>
   </div>
 </div>

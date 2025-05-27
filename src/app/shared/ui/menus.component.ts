@@ -1,6 +1,12 @@
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
+import { Menus } from "../type/menus";
+import { CommonModule } from "@angular/common";
 @Component({
   selector: "app-menus",
+  imports: [CommonModule],
   templateUrl: "./menus.component.html",
 })
-export class MenusComponent { }
+export class MenusComponent {
+  @Input() menuType: Menus = "navbar";
+  @Input() menuData: string[] = [];
+}

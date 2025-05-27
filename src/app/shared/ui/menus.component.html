@@ -1,0 +1,33 @@
+<nav
+  [ngClass]="{
+    'px-2 py-4 gap-12': menuType === 'navbar',
+    'bg-gray-50 border border-gray-200': menuType === 'subcategories',
+    'bg-white border border-gray-200 shadow-sm': menuType === 'products'
+  }"
+  class="flex p-4 rounded-md"
+>
+  <ul
+    [ngClass]="{
+      'flex-row space-x-12': menuType === 'navbar',
+      'flex-col space-y-2': menuType === 'subcategories',
+      'flex-row flex-wrap gap-3': menuType === 'products'
+    }"
+    class="flex w-full"
+  >
+    @for (item of menuData; track item) {
+    <li>
+      <a
+        href="#"
+        [ngClass]="{
+          'text-black hover:text-green-400 px-3 py-2': menuType === 'navbar',
+          'text-gray-700 hover:text-blue-600 px-3 py-2 hover:bg-gray-100': menuType === 'subcategories',
+          'text-pink-600 hover:bg-pink-50 px-4 py-2 border border-pink-200 hover:shadow-sm': menuType === 'products'
+        }"
+        class="block text-lg font-medium no-underline transition-colors duration-200 rounded-md"
+      >
+        {{ item }}
+      </a>
+    </li>
+    }
+  </ul>
+</nav>
